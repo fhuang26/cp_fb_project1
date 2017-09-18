@@ -42,6 +42,11 @@ public class Movie implements Comparable<Movie> {
     public String getBackdropUrl() {
         return backdropUrl;
     }
+
+    public int getId() {
+        return id;
+    }
+
     int id;
 
     public void setId(int id) {

@@ -42,5 +42,13 @@
         android:minHeight="27dp"
         android:textSize="14sp"
         android:color="@color/primary_text_default_material_dark"
-        android:maxLines="6" />
+        android:maxLines="13" />
+    <ImageView
+        android:id="@+id/VideoPreviewPlayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:visibility="visible"
+        android:src="@drawable/play_overlay_medium" />
 </RelativeLayout>

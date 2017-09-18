@@ -30,12 +30,14 @@ public class MovieActivity extends AppCompatActivity {
     ArrayList<Movie> movies;
     MovieAdapter movieAdapter;
     ListView lvItems;
+    int firstVisiblePos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie);
 
         lvItems = (ListView) findViewById(R.id.lvMovies);
+        firstVisiblePos = 0;
         movies = new ArrayList<>();
         movieAdapter = new MovieAdapter(this, movies);
         lvItems.setAdapter(movieAdapter);
@@ -75,6 +77,20 @@ public class MovieActivity extends AppCompatActivity {
 
     }
 
+    /*
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        firstVisiblePos = lvItems.getFirstVisiblePosition();
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState, PersistableBundle persistentState) {
+        super.onRestoreInstanceState(savedInstanceState, persistentState);
+        lvItems.setSelection(firstVisiblePos);
+    }
+    */
+
     public boolean trailerOrDetailsNextDialog (Context cnt, Movie movie)
     {
         AlertDialog.Builder ad = new AlertDialog.Builder(cnt);
@@ -97,7 +113,8 @@ public class MovieActivity extends AppCompatActivity {
                 "Trailer",
                 new DialogInterface.OnClickListener(){
                     public void onClick(DialogInterface dialog, int arg1) {
-
+                        Intent intent = new Intent(MovieActivity.this, TrailerActivity.class);
+                        startActivity(intent);
                     }
                 }
         );
