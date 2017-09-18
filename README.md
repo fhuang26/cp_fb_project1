@@ -38,7 +38,7 @@ The following **additional** features are implemented:
     * [x] User can click a movie item and a dialog pops up to allow user to choose one of following: Trailer or Details.
     * [x] Trailer Activity can play trailer of selected movie in full-screen using the YouTubePlayerView.
     * [x] If the user picks Details, then it starts Details Activity which shows more about the movie.
-    * [x] User can see trailer or details of every now_playing movie.
+    * [x] User can see trailer or details of now-playing movies.
     * [x] A play icon overlays movies that can be played.
     * [x] Java code is organized into main, models, data, and adapters.
     * [ ] To retain similar visible items in ListView as phone is rotated.
