@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flickster</string>
+    <string name="AlertDialogMsg">next go to</string>
+    <string name="title_activity_details">DetailsActivity</string>
+</resources>
